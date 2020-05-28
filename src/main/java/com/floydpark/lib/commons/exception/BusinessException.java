@@ -15,4 +15,8 @@ public class BusinessException extends GeneralException {
     public BusinessException(String message, Throwable throwable, List<String> errors) {
         super(message, throwable, errors);
     }
+
+    public BusinessException(String message, List<String> errors) {
+        super(message, errors);
+    }
 }

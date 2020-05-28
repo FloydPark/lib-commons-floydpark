@@ -22,6 +22,11 @@ abstract class GeneralException extends Exception{
         init(errors);
     }
 
+    GeneralException(String message, List<String> errors){
+        super(message);
+        init(errors);
+    }
+
     public List<String> getErrors() {
         return errors;
     }
