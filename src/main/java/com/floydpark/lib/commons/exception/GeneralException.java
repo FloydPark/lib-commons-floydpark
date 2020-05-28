@@ -3,7 +3,7 @@ package com.floydpark.lib.commons.exception;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class GeneralException extends Exception{
+abstract class GeneralException extends Exception implements IFloydparkException{
 
     private List<String> errors;
 

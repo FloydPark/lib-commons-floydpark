@@ -1,5 +1,7 @@
 package com.floydpark.lib.commons.exception;
 
+import org.springframework.http.HttpStatus;
+
 import java.util.List;
 
 public class ElementNotFoundException extends GeneralException {
@@ -18,5 +20,10 @@ public class ElementNotFoundException extends GeneralException {
 
     public ElementNotFoundException(String message, List<String> errors) {
         super(message, errors);
+    }
+
+    @Override
+    public HttpStatus getErrorHttpStatus() {
+        return HttpStatus.NOT_FOUND;
     }
 }
