@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class ResponseDTO<T extends Serializable> implements Serializable {
+public class ResponseDTO<T> implements Serializable {
 
     private T data;
     private Pagination query;
