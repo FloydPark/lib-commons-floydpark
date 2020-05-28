@@ -15,4 +15,8 @@ public class ValidationException extends GeneralException {
     public ValidationException(String message, Throwable throwable, List<String> errors){
         super(message, throwable, errors);
     }
+
+    public ValidationException(String message, List<String> errors){
+        super(message, errors);
+    }
 }

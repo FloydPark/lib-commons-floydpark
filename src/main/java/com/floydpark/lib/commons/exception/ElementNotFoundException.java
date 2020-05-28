@@ -15,4 +15,8 @@ public class ElementNotFoundException extends GeneralException {
     public ElementNotFoundException(String message, Throwable throwable, List<String> errors) {
         super(message, throwable, errors);
     }
+
+    public ElementNotFoundException(String message, List<String> errors) {
+        super(message, errors);
+    }
 }

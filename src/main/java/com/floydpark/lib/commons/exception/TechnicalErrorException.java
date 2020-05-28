@@ -14,4 +14,8 @@ public class TechnicalErrorException extends GeneralException {
     public TechnicalErrorException(String message, Throwable throwable, List<String> errors) {
         super(message, throwable, errors);
     }
+
+    public TechnicalErrorException(String message, List<String> errors) {
+        super(message, errors);
+    }
 }
