@@ -10,6 +10,7 @@ sourceCompatibility = '1.8'
 def url_archiva = project.hasProperty("url_archiva") ? url_archiva : ""
 def usr_archiva = project.hasProperty("usr_archiva") ? usr_archiva : ""
 def psw_archiva = project.hasProperty("psw_archiva") ? psw_archiva : ""
+def artifact_version = project.hasProperty("artifact_version") ? artifact_version : version
 
 configurations {
 	compileOnly {
@@ -46,6 +47,7 @@ sonarqube {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
+			version = artifact_version
 			from(components.java)
 		}
 	}
